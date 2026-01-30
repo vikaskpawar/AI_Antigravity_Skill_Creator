@@ -4,33 +4,31 @@ This guide outlines the process of creating and deploying a new skill for the An
 
 ## Skill Creation Workflow
 
-```mermaid
-graph TD
-    A[Identify Need/Topic] --> B[Define Skill Metadata]
-    B --> C[Create Folder Structure]
-    C --> D[Write SKILL.md]
-    D --> E[Add Resources & Examples]
-    E --> F[Validation & Testing]
-    F --> G[Deploy to .agent/skills/]
+![Skill Creation Workflow](docs/skill_creation_workflow.png)
 
-    subgraph "Folder Structure"
-    C1[/.agent/skills/skill-name/]
-    C2[/SKILL.md/]
-    C3[/resources//]
-    C4[/examples//]
-    C1 --- C2
-    C1 --- C3
-    C1 --- C4
-    end
+### 1. Identify Need/Topic
+*   Explore new niches or user requirements that need specialized agent behavior.
+*   Define the scope and guardrails for the skill.
 
-    subgraph "SKILL.md Requirements"
-    D1[YAML Frontmatter]
-    D2[Triggers & Use Cases]
-    D3[Workflow Checklist]
-    D4[Core Instructions]
-    D1 --- D2 --- D3 --- D4
-    end
-```
+### 2. Define Metadata
+*   **Name**: Gerund form, lowercase, hyphens (e.g., `managing-databases`).
+*   **Description**: Third-person summary with specific trigger keywords.
+
+### 3. Create Folder Structure
+*   Create directory: `.agent/skills/[skill-name]/`
+*   Add subfolders: `resources/`, `examples/`, `scripts/`.
+
+### 4. Write SKILL.md
+*   Draft the core instructions, trigger rules, and workflow checklists.
+*   Ensure paths use forward slashes (`/`).
+
+### 5. Add Resources & Examples
+*   Include reference code, templates, or data files to guide the agent.
+
+### 6. Validate & Deploy
+*   Test the skill activation.
+*   Push to the repository for agent-wide availability.
+
 
 ## Step-by-Step Instructions
 
